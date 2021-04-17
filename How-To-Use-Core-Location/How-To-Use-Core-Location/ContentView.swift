@@ -46,8 +46,6 @@ struct ContentView: View {
     }
     
     func showAddress() {
-        let floor = coreLocationManager.getFloor()
-        print(floor)
         coreLocationManager.getAddress { returnedAddress in
             guard let unwrappedAddress = returnedAddress else {
                 addressRetrieved = false
