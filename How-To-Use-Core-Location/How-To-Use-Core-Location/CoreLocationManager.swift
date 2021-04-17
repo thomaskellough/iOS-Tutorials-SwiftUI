@@ -20,6 +20,12 @@ class CoreLocationManager: NSObject, CLLocationManagerDelegate {
         }
     }
     
+    func getFloor() -> Date {
+        determineCurrentLocation()
+        let blah = CLVisit()
+        return blah.departureDate
+    }
+    
     func getCurrentLocation() -> CLLocationCoordinate2D? {
         determineCurrentLocation()
         
